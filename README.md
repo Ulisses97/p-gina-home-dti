@@ -1,6 +1,3 @@
-# desafio-clicks-circulos-em-tela
-Desafio front-end utilizando React
-
 <div align="center" >
   <h1 align="center" > 
     <img src="https://www.dtidigital.com.br/wp-content/uploads/2019/12/logo-dti-branca.png" width="40px" alt="logo da dti" />
