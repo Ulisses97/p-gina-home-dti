@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  min-height: 100%;
+}
+a{
+  text-decoration: none;
+}
+html {
+  font-size: calc(15px + 0.390625vw);
+}
+li{
+  list-style: none;
+}
+
+@keyframes animate-div {
+  from { margin-top: -100vh; }
+  to { margin-top: 0;}
+}
+
+.fp-watermark{
+  display: none !important;
+}
+
+#fullpage{
+  width: 100%;
+  height: 100vh;
+
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.section{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  scroll-snap-align: start;
+}
+
+.header{
+  /* position: absolute; */
+  width: 100%;
+  z-index: 999;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent;
+  margin-bottom: -70px;
+  padding: 0 10%;
+}
+
+.nav-links{
+  display: flex;
+  position: relative;
+  font-size: 15px;
+  font-weight: 600;
+  color: #FFF;
+  gap: 16px;
+  align-items: center;
+
+  cursor: pointer;
+}
+
+.active-dropdown{visibility: visible !important;}
+.active-dropdown-mobile{display: block !important;}
+.activeMenuMobile{display: block !important; transition: all 0.3s ease; }
+
+.nav-links-dropdown{
+  visibility: hidden;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.37);
+  padding: 6px;
+  /* -webkit-animation: animate-div 3s; */
+  /* transition: all 0.2s ease-in; */
+}
+.nav-links-dropdown li a,
+.nav-links a{
+  color: #FFF;
+
+}
+.nav-links-dropdown li{
+  padding: 10px 8px;
+}
+.nav-links-dropdown li:hover{
+  border-bottom: 2px solid #FFF;
+}
+
+.logo-dti{
+  max-width: 80px;
+  width: 100%;
+  padding: 8px;
+}
+
+.menu-mobile{
+  display: none;
+  height: 100vh;
+  background-color: #e31c79;
+  animation: animate-div 0.2s ease;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.menu-mobile-content{
+  padding-top: 100px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+/* ----------- MENU HAMBURGUER */
+.btn-menu {width: 25px; height: 20px; position: relative; display: none; align-items: center;}
+.btn-menu span,
+.btn-menu span:before, 
+.btn-menu span:after {width: 100%; height: 2px; display: block; background: #FFF;}
+
+.btn-menu span:before, 
+.btn-menu span:after {content: ''; position: absolute; transition-duration: .2s;}
+.btn-menu span:before {top: 0;}
+.btn-menu span:after {bottom: 0;}
+
+.btn-menu .active {background: none;}
+.btn-menu .active::before {transform: rotate(45deg); top: 50%; margin-top: -1px;}
+.btn-menu .active::after {transform: rotate(-45deg); top: 50%; margin-top: -1px;}
+
+
+.bg-image{
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.s1{
+  background-image: url("https://www.dtidigital.com.br/wp-content/uploads/2020/11/Fundo-homee-01.svg"), linear-gradient(rgba(0, 0, 0, 0.205),rgba(0, 0, 0, 0.205));
+  align-items: center;
+  padding: 1rem;
+}
+.s1 img{
+  max-width: 431px;
+  width: 100%;
+}
+
+.s2{
+  background-image: url("https://www.dtidigital.com.br/wp-content/uploads/2021/06/Acelerando-a-transformacao-digital.jpg"), linear-gradient(rgba(0, 0, 0, 0.205),rgba(0, 0, 0, 0.205));
+}
+
+.s3{
+  background-image: url("https://www.dtidigital.com.br/wp-content/uploads/2021/06/Os-agilistas-podcast.jpg"), linear-gradient(rgba(0, 0, 0, 0.205),rgba(0, 0, 0, 0.205));
+}
+.s4{
+  background-image: url("https://www.dtidigital.com.br/wp-content/uploads/2021/06/Blog-dti-digital-transformacao-digital.jpg"), linear-gradient(rgba(0, 0, 0, 0.205),rgba(0, 0, 0, 0.205));
+}
+.s5{
+  background-image: url("https://www.dtidigital.com.br/wp-content/uploads/2021/06/Venha-ser-dti-vagas-carreiras.jpg"), linear-gradient(rgba(0, 0, 0, 0.205),rgba(0, 0, 0, 0.205));
+}
+.s5{
+  background-image: url("https://www.dtidigital.com.br/wp-content/uploads/2021/06/Venha-ser-dti-vagas-carreiras.jpg"), linear-gradient(rgba(0, 0, 0, 0.205),rgba(0, 0, 0, 0.205));
+}
+.s6{
+  background-image: url("https://www.dtidigital.com.br/wp-content/uploads/2021/06/Fale-com-a-dti-digital.jpg"), linear-gradient(rgba(0, 0, 0, 0.205),rgba(0, 0, 0, 0.205));
+}
+.logo-os-agilistas{
+  max-width: 431px;
+  width: 100%;
+  display: block;
+}
+
+.section-content{
+  margin-left: 10%;
+}
+.section-content h1{
+  font-size: 2.0rem;
+  line-height: 2.4rem;
+  color: #FFF;
+}
+.section-content h3{
+  font-size: 1.4rem;
+  color: rgb(231, 231, 231);
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.section-content a{
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  color: rgb(17, 17, 17);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 8px 14px;
+  width: 250px;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 6px;
+  background-color: #FFF;
+  transition: all 0.2s ease-in;
+}
+.section-content a:hover{
+  background-color: rgb(235, 235, 235);
+}
+
+.social{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: -50px;
+  padding: 0 10%;
+}
+.social p{
+  font-size: 16px;
+  color: #FFF;
+  font-weight: 600;
+}
+.redes{
+  display: flex;
+  gap: 20px;
+}
+.redes a{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.redes a svg{
+    width: 24px;
+}
+
+.footer{
+  height: 30vh !important;
+  margin-top: 100px;
+
+  padding: 0 10%;
+  font-size: 16px;
+  display: grid;
+  color: rgb(27, 27, 27);
+  grid-template-columns: 1fr 100px repeat(4,1fr);
+  background-color: #FFF;
+ 
+}
+.info-endereco h6,
+.info-endereco a{
+  font-size: 16px;
+  color: rgb(27, 27, 27);
+}
+.info-endereco div{margin-top: 20px;}
+.info-endereco div p{margin-top: 8px;}
+
+.nav a{ color: rgb(27, 27, 27);}
+.nav ul li + li{
+  margin-top: 8px;
+}
+
+@media (max-width: 800px) {
+  .btn-menu{
+    display: flex;
+  }
+  .nav-links{
+    display: none !important;
+  }
+  .menu-mobile-content{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+  }
+  .nav-links-mobile{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .nav-links-mobile span{ font-weight: 700;}
+  .nav-links-mobile,
+  .nav-links-mobile a{
+    color: #FFF;
+  }
+  .nav-links-dropdown-mobile{
+    margin-left: 10px;
+    display: none;
+  }
+}
+
+.fp-overflow{
+  overflow: hidden !important;
+}
